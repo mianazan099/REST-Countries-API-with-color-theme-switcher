@@ -1,5 +1,5 @@
 - [X] write the html for home page
-- [ ] write the html for the details page
+- [X] write the html for the details page
 - [ ] write the css for the home page
 - [ ] write the css for the details page
 - [ ] See all countries from the API on the homepage
