@@ -1,4 +1,4 @@
-- [ ] write the html for home page
+- [X] write the html for home page
 - [ ] write the html for the details page
 - [ ] write the css for the home page
 - [ ] write the css for the details page

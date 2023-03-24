@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REST Countries API with color theme switcher</title>
+    <script
+      src="https://kit.fontawesome.com/871a488792.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      img {
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a class="logo" href="/index.html">Where in the world?</a>
+      <!-- <button class="theme-switch">
+        <i class="fa-solid fa-moon"></i> Dark Mode
+      </button> -->
+      <button class="theme-switch">
+        <i class="fa-solid fa-sun"></i> Light Mode
+      </button>
+    </header>
+    <main>
+      <div class="forms">
+        <form>
+          <input type="text" name="country" id="country" />
+        </form>
+        <form action="/" method="get">
+          <select name="filter" id="filter">
+            <option value="" disabled selected>filter by Region</option>
+            <option value="Africa">Africa</option>
+            <option value="America">America</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europe</option>
+            <option value="Oceania">Oceania</option>
+          </select>
+        </form>
+      </div>
+      <div class="card">
+        <div class="img">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_the_Taliban.svg"
+            alt="country flag"
+          />
+        </div>
+        <h2>Afghanistan</h2>
+        <ul>
+          <li><span>Population:</span> 40218234</li>
+          <li><span>Region:</span> Asia</li>
+          <li><span>Capital:</span> Kabul</li>
+        </ul>
+      </div>
+    </main>
+  </body>
+</html>
