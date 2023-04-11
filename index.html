@@ -1,45 +1,65 @@
-<!-- <!DOCTYPE html> -->
-<!-- <html lang="en"> -->
-<!-- <head> -->
-<!-- <meta charset="UTF-8" /> -->
-<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
-<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
-<!-- <title>REST Countries API with color theme switcher</title> -->
-<!-- <script -->
-<!-- src="https://kit.fontawesome.com/871a488792.js" -->
-<!-- crossorigin="anonymous" -->
-<!-- ></script> -->
-<!-- <link rel="stylesheet" href="style.css" /> -->
-<!-- </head> -->
-<!-- <body> -->
-<!-- <header> -->
-<!-- <div> -->
-<!-- <a class="logo" href="/index.html">Where in the world?</a> -->
-<!-- <button class="theme-switch"></button> -->
-<!-- </div> -->
-<!-- </header> -->
-<!-- <main> -->
-<!-- <div class="form"> -->
-<!-- <div class="textInput"> -->
-<!-- <i class="fa-solid fa-search"></i> -->
-<!-- <input type="text" placeholder="Search for a country..." /> -->
-<!-- </div> -->
-<!-- <div class="selectInput"> -->
-<!-- <button class="selectBtn"> -->
-<!-- <span>Filter by Region</span> -->
-<!-- <i class="fa-solid fa-chevron-down"></i> -->
-<!-- </button> -->
-<!-- <ul class="options"> -->
-<!-- <li class="option"><button>Africa</button></li> -->
-<!-- <li class="option"><button>Americas</button></li> -->
-<!-- <li class="option"><button>Asia</button></li> -->
-<!-- <li class="option"><button>Europe</button></li> -->
-<!-- <li class="option"><button>Oceania</button></li> -->
-<!-- </ul> -->
-<!-- </div> -->
-<!-- </div> -->
-<!-- <div class="card-container"></div> -->
-<!-- </main> -->
-<!-- <script src="./script.js"></script> -->
-<!-- </body> -->
-<!-- </html> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REST Countries API with color theme switcher</title>
+    <script
+      src="https://kit.fontawesome.com/871a488792.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="dark">
+    <header>
+      <div>
+        <a class="logo" href="/index.html">Where in the world?</a>
+        <button class="theme-switch">
+          <i class="fa-solid fa-sun"></i>Light Mode
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <div class="form">
+        <div class="textInput">
+          <i class="fa-solid fa-search"></i>
+          <input type="text" placeholder="Search for a country..." />
+        </div>
+        <div class="selectInput">
+          <button class="selectBtn">
+            <span>Filter by Region</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <ul class="options">
+            <li class="option"><button>Africa</button></li>
+            <li class="option"><button>Americas</button></li>
+            <li class="option"><button>Asia</button></li>
+            <li class="option"><button>Europe</button></li>
+            <li class="option"><button>Oceania</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="card-container">
+        <div class="card">
+          <div class="img">
+            <img
+              src="https://flagcdn.com/w320/bb.png"
+              alt="The flag of Barbados is composed of three equal vertical bands of ultramarine, gold and ultramarine. The head of a black trident is centered in the gold band."
+            />
+          </div>
+          <div class="info">
+            <h2>Barbados</h2>
+            <ul>
+              <li>Population: <span>287371</span></li>
+              <li>Region: <span>Americas</span></li>
+              <li>Capital: <span>Bridgetown</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- <script src="./script.js"></script> -->
+  </body>
+</html>
