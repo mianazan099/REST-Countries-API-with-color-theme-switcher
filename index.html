@@ -9,52 +9,38 @@
       src="https://kit.fontawesome.com/871a488792.js"
       crossorigin="anonymous"
     ></script>
-    <style>
-      img {
-        max-width: 100%;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
-      <a class="logo" href="/index.html">Where in the world?</a>
-      <!-- <button class="theme-switch">
-        <i class="fa-solid fa-moon"></i> Dark Mode
-      </button> -->
-      <button class="theme-switch">
-        <i class="fa-solid fa-sun"></i> Light Mode
-      </button>
+      <div>
+        <a class="logo" href="/index.html">Where in the world?</a>
+        <button class="theme-switch"></button>
+      </div>
     </header>
+
     <main>
-      <div class="forms">
-        <form>
-          <input type="text" name="country" id="country" />
-        </form>
-        <form action="/" method="get">
-          <select name="filter" id="filter">
-            <option value="" disabled selected>filter by Region</option>
-            <option value="Africa">Africa</option>
-            <option value="America">America</option>
-            <option value="Asia">Asia</option>
-            <option value="Europe">Europe</option>
-            <option value="Oceania">Oceania</option>
-          </select>
-        </form>
-      </div>
-      <div class="card">
-        <div class="img">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_the_Taliban.svg"
-            alt="country flag"
-          />
+      <div class="form">
+        <div class="textInput">
+          <i class="fa-solid fa-search"></i>
+          <input type="text" placeholder="Search for a country..." />
         </div>
-        <h2>Afghanistan</h2>
-        <ul>
-          <li>Population: <span>40218234</span></li>
-          <li>Region: <span>Asia</span></li>
-          <li>Capital: <span>Kabul</span></li>
-        </ul>
+        <div class="selectInput">
+          <button class="selectBtn">
+            <span>Filter by Region</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <ul class="options">
+            <li class="option"><button>Africa</button></li>
+            <li class="option"><button>Americas</button></li>
+            <li class="option"><button>Asia</button></li>
+            <li class="option"><button>Europe</button></li>
+            <li class="option"><button>Oceania</button></li>
+          </ul>
+        </div>
       </div>
+      <div class="card-container"></div>
     </main>
+    <script src="./script.js"></script>
   </body>
 </html>
