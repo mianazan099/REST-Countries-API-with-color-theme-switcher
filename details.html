@@ -1,63 +1,59 @@
-<!-- <!DOCTYPE html> -->
-<!-- <html lang="en"> -->
-<!-- <head> -->
-<!-- <meta charset="UTF-8" /> -->
-<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
-<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
-<!-- <title>REST Countries API with color theme switcher</title> -->
-<!-- <script -->
-<!-- src="https://kit.fontawesome.com/871a488792.js" -->
-<!-- crossorigin="anonymous" -->
-<!-- ></script> -->
-<!-- <style> -->
-<!-- /* img { */ -->
-<!-- /* max-width: 100%; */ -->
-<!-- /* } */ -->
-<!-- /* </style> */ -->
-<!-- </head> -->
-<!-- <body> -->
-<!-- <header> -->
-<!-- <a class="logo" href="/index.html">Where in the world?</a> -->
-<!-- <button class="theme-switch"> -->
-<!-- <i class="fa-solid fa-moon"></i> Dark Mode -->
-<!-- </button> -->
-<!-- <button class="theme-switch"> -->
-<!-- <i class="fa-solid fa-sun"></i> Light Mode -->
-<!-- </button> -->
-<!-- </header> -->
-<!-- <main> -->
-<!-- <div class="back"> -->
-<!-- <button><i class="fa-solid fa-arrow-left"></i> Back</button> -->
-<!-- </div> -->
-<!-- <div class="details"> -->
-<!-- <div class="img"> -->
-<!-- <img -->
-<!-- src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_the_Taliban.svg" -->
-<!-- alt="country flag" -->
-<!-- /> -->
-<!-- </div> -->
-<!-- <div class="details"> -->
-<!-- <h1>Afghanistan</h1> -->
-<!-- <div> -->
-<!-- <ul> -->
-<!-- <li>Native Name: <span>افغانستان</span></li> -->
-<!-- <li>Population: <span>40218234</span></li> -->
-<!-- <li>Region: <span>Asia</span></li> -->
-<!-- <li>Sub Region: <span>Southern Asia</span></li> -->
-<!-- <li>Capital: <span>Kabul</span></li> -->
-<!-- </ul> -->
-<!-- <ul> -->
-<!-- <li>Top Level Domain: <span>.af</span></li> -->
-<!-- <li>Currencies: <span>Afghan afghani</span></li> -->
-<!-- <li>Languages: <span>Pashto, Uzbek, Turkmen</span></li> -->
-<!-- </ul> -->
-<!-- </div> -->
-<!-- <p> -->
-<!-- Border Countries: <a href="#">France</a> <a href="#">Germany</a> -->
-<!-- <a href="#">Netherlands</a> -->
-<!-- </p> -->
-<!-- </div> -->
-<!-- </div> -->
-<!-- </main> -->
-<!-- </body> -->
-<!-- </html> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REST Countries API with color theme switcher</title>
+    <script
+      src="https://kit.fontawesome.com/871a488792.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/details.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a class="logo" href="/index.html">Where in the world?</a>
+        <button class="theme-switch">
+          <i class="fa-solid fa-sun"></i>Light Mode
+        </button>
+      </div>
+    </header>
+    <main>
+      <button><i class="fa-solid fa-arrow-left"></i>Back</button>
+      <div class="details">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_the_Taliban.svg"
+          alt="country flag"
+        />
+        <div class="information">
+          <h1>Afghanistan</h1>
+          <div class="info">
+            <ul>
+              <li>Native Name: <span>افغانستان</span></li>
+              <li>Population: <span>40218234</span></li>
+              <li>Region: <span>Asia</span></li>
+              <li>Sub Region: <span>Southern Asia</span></li>
+              <li>Capital: <span>Kabul</span></li>
+            </ul>
+            <ul>
+              <li>Top Level Domain: <span>.af</span></li>
+              <li>Currencies: <span>Afghan afghani</span></li>
+              <li>Languages: <span>Pashto, Uzbek, Turkmen</span></li>
+            </ul>
+          </div>
+          <div class="border">
+            <p>Border Countries:</p>
+            <div>
+              <button>France</button>
+              <button>Germany</button>
+              <button>Netherlands</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
