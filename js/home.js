@@ -4,14 +4,33 @@
   );
   const data = await response.json();
   createCards(data);
-  const textInput = document.querySelector(".form .textInput");
+  const textInput = document.querySelector(".textInput input");
+  const selectOptions = document.querySelectorAll(".options .option button");
+  const selectInput = document.querySelector(".selectInput");
+
+  textInput.value = "";
+
   textInput.addEventListener("input", (e) => {
+    selectInput.firstElementChild.firstElementChild.textContent =
+      "Filter by Region";
     const filterData = data.filter((obj) => {
       return obj.name.common
         .toLowerCase()
         .includes(e.target.value.toLowerCase());
     });
     createCards(filterData);
+  });
+
+  selectOptions.forEach((option) => {
+    option.addEventListener("click", (e) => {
+      selectInput.firstElementChild.firstElementChild.textContent =
+        e.target.textContent;
+      textInput.value = "";
+      const filterData = data.filter((obj) => {
+        return obj.region === e.target.textContent;
+      });
+      createCards(filterData);
+    });
   });
   // Functions
   function createCards(data) {
