@@ -4,6 +4,15 @@
   );
   const data = await response.json();
   createCards(data);
+  const textInput = document.querySelector(".form .textInput");
+  textInput.addEventListener("input", (e) => {
+    const filterData = data.filter((obj) => {
+      return obj.name.common
+        .toLowerCase()
+        .includes(e.target.value.toLowerCase());
+    });
+    createCards(filterData);
+  });
   // Functions
   function createCards(data) {
     const cardContainer = document.querySelector(".card-container");
