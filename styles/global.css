@@ -4,22 +4,19 @@
 
 :root {
   --ff-nunito: "Nunito Sans", sans-serif;
+}
+
+.dark {
   --clr-el: 209, 23%, 22%;
   --clr-bg: 207, 26%, 17%;
   --clr-txt: 0, 0%, 100%;
 }
 
-/* .dark {
-    --clr-el: 209, 23%, 22%;
-    --clr-bg: 207, 26%, 17%;
-    --clr-txt: 0, 0%, 100%;
-  } */
-
-/* .light {
-    --clr-el: 0, 0%, 100%;
-    --clr-bg: 0, 0%, 98%;
-    --clr-txt: 200, 15%, 8%;
-  } */
+.light {
+  --clr-el: 0, 0%, 100%;
+  --clr-bg: 0, 0%, 98%;
+  --clr-txt: 200, 15%, 8%;
+}
 
 /* Reset */
 
