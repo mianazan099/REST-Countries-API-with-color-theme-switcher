@@ -1,30 +1,34 @@
 (async function () {
-  const response = await fetch(
-    "https://restcountries.com/v3.1/all?fields=flags,name,population,region,capital,cca2"
-  );
-  const data = await response.json();
-  createCards(data);
   const textInput = document.querySelector(".textInput input");
+  const selectSpan = document.querySelector(".selectBtn span");
   const selectOptions = document.querySelectorAll(".options .option button");
-  const selectInput = document.querySelector(".selectInput");
+
+  let data;
+  try {
+    let response = await fetch(
+      "https://restcountries.com/v3.1/all?fields=flags,name,population,region,capital,cca2"
+    );
+    data = await response.json();
+  } catch (e) {
+    console.log("There was an error while fetching data from the API: ", e);
+  }
+  createCards(data);
 
   textInput.value = "";
 
   textInput.addEventListener("input", (e) => {
-    selectInput.firstElementChild.firstElementChild.textContent =
-      "Filter by Region";
+    selectSpan.textContent = "Filter by Region";
     const filterData = data.filter((obj) => {
-      return obj.name.common
-        .toLowerCase()
-        .includes(e.target.value.toLowerCase());
+      const lCName = obj.name.common.toLowerCase();
+      const lCValue = e.target.value.toLowerCase();
+      return lCName.includes(lCValue);
     });
     createCards(filterData);
   });
 
   selectOptions.forEach((option) => {
     option.addEventListener("click", (e) => {
-      selectInput.firstElementChild.firstElementChild.textContent =
-        e.target.textContent;
+      selectSpan.textContent = e.target.textContent;
       textInput.value = "";
       const filterData = data.filter((obj) => {
         return obj.region === e.target.textContent;
@@ -32,7 +36,9 @@
       createCards(filterData);
     });
   });
+
   // Functions
+
   function createCards(data) {
     const cardContainer = document.querySelector(".card-container");
     const template = document.querySelector("template");
