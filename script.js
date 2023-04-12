@@ -1,6 +1,6 @@
 (async function () {
   const response = await fetch(
-    "https://restcountries.com/v3.1/all?fields=flags,name,population,region,capital"
+    "https://restcountries.com/v3.1/all?fields=flags,name,population,region,capital,cca2"
   );
   const data = await response.json();
   createCards(data);
@@ -40,16 +40,18 @@
         population,
         region,
         capital: [capital],
+        cca2,
       }) => {
         const clone = template.cloneNode(true);
         let el = clone.content.firstElementChild;
         let img = el.querySelector("img");
-        let name = el.querySelector("h2");
+        let name = el.querySelector("h2 a");
         let liArr = el.querySelectorAll("span");
         img.src = png;
         img.alt = alt;
         name.textContent = common;
-        liArr[0].textContent = population;
+        name.href = `/details.html?code=${cca2}`;
+        liArr[0].textContent = population.toLocaleString();
         liArr[1].textContent = region;
         liArr[2].textContent = capital;
         cardContainer.appendChild(el);

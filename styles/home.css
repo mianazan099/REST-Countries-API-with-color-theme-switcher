@@ -106,7 +106,7 @@ main {
   display: flex;
   justify-content: center;
   flex-flow: wrap;
-  gap: 4.5rem;
+  gap: clamp(2.5rem, calc(1.8rem + 3vw), 4.5rem);
 }
 
 .card {
