@@ -1,3 +1,65 @@
+(async function () {
+  const response = await fetch(
+    "https://restcountries.com/v3.1/all?fields=flags,name,population,region,capital"
+  );
+  const data = await response.json();
+  createCards(data);
+  //   const selectOptions = document.querySelectorAll(
+  //     ".form .selectInput .options .option"
+  //   );
+  //   console.log(selectOptions);
+  //   // const selectInput = document.querySelector(".form .selectInput");
+  //   const textInput = document.querySelector(".form .textInput");
+  //   textInput.addEventListener("input", (e) => {
+  //     const filterData = data.filter((obj) => {
+  //       return obj.name.common
+  //         .toLowerCase()
+  //         .includes(e.target.value.toLowerCase());
+  //     });
+  //     createCards(filterData);
+  //   });
+  //   selectOptions.forEach((option) => {
+  //     option.addEventListener("click", () => {
+  //       console.log("i");
+  //       //   textInput.value = "";
+  //       //   const filterData = data.filter((obj) => {
+  //       //     return obj.region === e.target.value;
+  //       //   });
+  //       //   createCards(filterData);
+  //     });
+  //   });
+  function createCards(data) {
+    const cardContainer = document.querySelector(".card-container");
+    const template = document.querySelector("template");
+
+    cardContainer.innerHTML = "";
+    data.forEach(
+      ({
+        flags: { png, alt },
+        name: { common },
+        population,
+        region,
+        capital: [capital],
+      }) => {
+        const clone = template.cloneNode(true);
+        let el = clone.content.firstElementChild;
+        let img = el.querySelector("img");
+        let name = el.querySelector("h2");
+        let liArr = el.querySelectorAll("span");
+        img.src = png;
+        img.alt = alt;
+        name.textContent = common;
+        liArr[0].textContent = population;
+        liArr[1].textContent = region;
+        liArr[2].textContent = capital;
+        cardContainer.appendChild(el);
+      }
+    );
+  }
+})();
+
+// OLD CODE
+
 // // Theme
 
 // const themeSwitch = document.querySelector("header .theme-switch");
@@ -32,75 +94,3 @@
 // });
 
 // // Card
-
-// (async function () {
-//   const response = await fetch(
-//     "https://restcountries.com/v3.1/all?fields=flags,name,population,region,capital"
-//   );
-//   const data = await response.json();
-//   createCards(data);
-
-//   const selectOptions = document.querySelectorAll(
-//     ".form .selectInput .options .option"
-//   );
-//   console.log(selectOptions);
-//   // const selectInput = document.querySelector(".form .selectInput");
-//   const textInput = document.querySelector(".form .textInput");
-
-//   textInput.addEventListener("input", (e) => {
-//     const filterData = data.filter((obj) => {
-//       return obj.name.common
-//         .toLowerCase()
-//         .includes(e.target.value.toLowerCase());
-//     });
-//     createCards(filterData);
-//   });
-
-//   selectOptions.forEach((option) => {
-//     option.addEventListener("click", () => {
-//       console.log("i");
-
-//       //   textInput.value = "";
-//       //   const filterData = data.filter((obj) => {
-//       //     return obj.region === e.target.value;
-//       //   });
-//       //   createCards(filterData);
-//     });
-//   });
-// })();
-
-// function createCards(data) {
-//   const cardContainer = document.querySelector(".card-container");
-//   cardContainer.innerHTML = "";
-//   data.forEach(
-//     ({
-//       flags: { png, alt },
-//       name: { common },
-//       population,
-//       region,
-//       capital: [capital],
-//     }) => {
-//       const card = createElement(`
-//         <div class="card">
-//           <div class="img">
-//             <img src="${png}" alt="${alt}" />
-//           </div>
-//           <div class="info">
-//             <h2>${common}</h2>
-//             <ul>
-//               <li>Population: <span>${population.toLocaleString()}</span></li>
-//               <li>Region: <span>${region}</span></li>
-//               <li>Capital: <span>${capital}</span></li>
-//             </ul>
-//           </div>
-//         </div>`);
-//       cardContainer.appendChild(card);
-//     }
-//   );
-// }
-
-// function createElement(html) {
-//   const template = document.createElement("template");
-//   template.innerHTML = html.trim();
-//   return template.content.firstElementChild;
-// }
