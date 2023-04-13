@@ -101,7 +101,7 @@ main > button i {
 
   .border {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     gap: 1rem;
   }
 
@@ -109,6 +109,7 @@ main > button i {
     margin-bottom: 0;
     width: 150px;
     min-width: max-content;
+    padding-block: 0.5rem;
   }
 
   .border div {
