@@ -1,9 +1,6 @@
 main {
-  padding: clamp(2.5rem, calc(1.62rem + 3.76vw), 5rem)
-    clamp(1.75rem, calc(0.61rem + 4.88vw), 5rem);
   padding: 2.5rem 1.75rem;
   font-size: 1rem;
-  max-width: calc(25rem + clamp(1.75rem, calc(0.61rem + 4.88vw), 5rem));
   max-width: 25rem;
   margin-inline: auto;
 }
@@ -24,8 +21,7 @@ main > button i {
 
 .details img {
   margin-bottom: 48px;
-  width: clamp(20rem, calc(14.72rem + 22.54vw), 35rem);
-  width: 100%;
+  /* width: 100%; */
 }
 
 .information h1 {
@@ -39,7 +35,6 @@ main > button i {
   flex-direction: column;
   gap: 3rem;
   margin-bottom: clamp(2rem, calc(1.12rem + 3.76vw), 4.5rem);
-  /* display: none; */
 }
 
 .info ul > * + * {
@@ -80,28 +75,17 @@ main > button i {
     max-width: calc(35rem + clamp(1.75rem, calc(0.61rem + 4.88vw), 5rem));
     margin-inline: auto;
   }
-  .details {
-    /* display: flex; */
-    /* align-items: center; */
-    /* justify-content: space-between; */
-    /* gap: 9rem; */
-  }
 
   .details img {
     width: 35rem;
-
-    /* margin-bottom: 0; */
   }
 
   .info {
     flex-direction: row;
-    /* justify-content: space-between; */
-    /* gap: 0; */
   }
 
   .border {
     display: flex;
-    /* align-items: center; */
     gap: 1rem;
   }
 
@@ -114,7 +98,6 @@ main > button i {
 
   .border div {
     width: 100%;
-    gap: 1rem;
   }
 }
 
@@ -123,16 +106,18 @@ main > button i {
     max-width: 90rem;
     padding: 5rem;
   }
+
   .details {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    gap: 9rem;
     gap: 4rem;
   }
+
   .details img {
     margin-bottom: 0;
   }
+
   .information {
     margin-left: auto;
   }

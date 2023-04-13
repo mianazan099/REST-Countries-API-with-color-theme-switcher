@@ -1,6 +1,10 @@
 (async function () {
-  const cCode = window.location.search.substring(6);
-  const url = `https://restcountries.com/v3.1/alpha/${cCode}?fields=name,population,region,subregion,capital,tld,currencies,languages,borders,flags`;
+  const img = document.querySelector(".details img");
+  const name = document.querySelector(".information h1");
+  const liArr = document.querySelectorAll(".info ul li span");
+  // Fetch Data from the API
+  const countryCode = window.location.search.substring(6);
+  const url = `https://restcountries.com/v3.1/alpha/${countryCode}?fields=name,population,region,subregion,capital,tld,currencies,languages,borders,flags`;
   let data;
   try {
     let response = await fetch(url);
@@ -8,15 +12,16 @@
   } catch (e) {
     console.log("There was an error while fetching data from the API: ", e);
   }
-  const img = document.querySelector(".details img");
-  const name = document.querySelector(".information h1");
-  const liArr = document.querySelectorAll(".info ul li span");
+  // Add data to the page
+  document.title = `REST Countries API - Details of ${data.name.common}`;
   img.src = data.flags.svg;
   img.alt = data.flags.alt;
   name.textContent = data.name.common;
+
   let nativeNameKeys = Object.keys(data.name.nativeName);
-  liArr[0].textContent =
-    data.name.nativeName[nativeNameKeys[nativeNameKeys.length - 1]].common;
+  let lastKey = nativeNameKeys[nativeNameKeys.length - 1];
+  liArr[0].textContent = data.name.nativeName[lastKey].common;
+
   liArr[1].textContent = data.population.toLocaleString();
   liArr[2].textContent = data.region;
   liArr[3].textContent = data.subregion;
@@ -37,6 +42,7 @@
   if (data.borders.length === 0) {
     border.style.display = "none";
   }
+
   for (const key in data.borders) {
     if (Object.hasOwnProperty.call(data.borders, key)) {
       const value = data.borders[key];
@@ -49,10 +55,7 @@
           a.textContent = data[0].name.common;
           btn.appendChild(a);
           BtnContainer.appendChild(btn);
-          console.log(value);
         });
     }
   }
-  // BtnContainer.appendChild;
-  console.log(data);
 })();

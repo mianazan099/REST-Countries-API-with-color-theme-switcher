@@ -54,17 +54,13 @@ body {
   color: hsl(var(--clr-txt));
   font-family: var(--ff-nunito);
   font-size: 0.875rem;
-  /* margin-top: clamp(5.75rem, calc(4.96rem + 3.38vw), 8rem); */
 }
 
 /* Header */
+
 header {
   background-color: hsl(var(--clr-el));
   padding-block: 1.5rem;
-  /* position: fixed; */
-  /* left: 0; */
-  /* right: 0; */
-  /* top: 0; */
   box-shadow: 0 0 4px 0 hsl(var(--clr-txt), 0.25);
 }
 
