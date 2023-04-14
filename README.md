@@ -28,11 +28,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.png)
+![](./Screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/restcountriesapiwithcolorthemeswitcher-SqkTSCS0d5)
 - Live Site URL: [Website](https://mianazan099.github.io/REST-Countries-API-with-color-theme-switcher/)
 
 ## Built with

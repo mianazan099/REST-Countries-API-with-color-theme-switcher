@@ -51,7 +51,7 @@
         .then((data) => {
           const btn = document.createElement("button");
           const a = document.createElement("a");
-          a.href = `/details.html?code=${value}`;
+          a.href = `./details.html?code=${value}`;
           a.textContent = data[0].name.common;
           btn.appendChild(a);
           BtnContainer.appendChild(btn);

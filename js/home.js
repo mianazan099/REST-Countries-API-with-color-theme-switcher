@@ -60,7 +60,7 @@
         img.src = png;
         img.alt = alt;
         name.textContent = common;
-        name.href = `/details.html?code=${cca2}`;
+        name.href = `./details.html?code=${cca2}`;
         liArr[0].textContent = population.toLocaleString();
         liArr[1].textContent = region;
         liArr[2].textContent = capital;
